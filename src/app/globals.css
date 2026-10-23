@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aether-void: #030308;
+  --aether-glow: #7c5cff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--aether-void);
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar for memory panel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 92, 255, 0.3);
+  border-radius: 2px;
+}
+
+/* Glow utilities */
+.glow-text {
+  text-shadow: 0 0 20px rgba(124, 92, 255, 0.6),
+    0 0 40px rgba(124, 92, 255, 0.3);
+}
+
+.glow-border {
+  box-shadow: 0 0 0 1px rgba(124, 92, 255, 0.3),
+    0 0 30px rgba(124, 92, 255, 0.15);
+}
+
+/* Selection */
+::selection {
+  background: rgba(124, 92, 255, 0.4);
+  color: white;
+}
